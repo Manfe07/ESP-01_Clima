@@ -1,0 +1,150 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector_Generic:Conn_02x04_Odd_Even ESP-1
+U 1 1 5D700D8F
+P 4750 4000
+F 0 "ESP-1" H 4800 4317 50  0000 C CNN
+F 1 "Conn_02x04_Odd_Even" H 4800 4226 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical" H 4750 4000 50  0001 C CNN
+F 3 "~" H 4750 4000 50  0001 C CNN
+	1    4750 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male 3V1
+U 1 1 5D701873
+P 3450 3450
+F 0 "3V1" H 3558 3631 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 3558 3540 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 3450 3450 50  0001 C CNN
+F 3 "~" H 3450 3450 50  0001 C CNN
+	1    3450 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x04_Female BME280
+U 1 1 5D7025DB
+P 5500 3350
+F 0 "BME280" H 5528 3326 50  0000 L CNN
+F 1 "Conn_01x04_Female" H 5528 3235 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 5500 3350 50  0001 C CNN
+F 3 "~" H 5500 3350 50  0001 C CNN
+	1    5500 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0101
+U 1 1 5D7039B1
+P 3750 3450
+F 0 "#PWR0101" H 3750 3300 50  0001 C CNN
+F 1 "+3.3V" H 3765 3623 50  0000 C CNN
+F 2 "" H 3750 3450 50  0001 C CNN
+F 3 "" H 3750 3450 50  0001 C CNN
+	1    3750 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0102
+U 1 1 5D703E02
+P 5200 3250
+F 0 "#PWR0102" H 5200 3100 50  0001 C CNN
+F 1 "+3.3V" H 5215 3423 50  0000 C CNN
+F 2 "" H 5200 3250 50  0001 C CNN
+F 3 "" H 5200 3250 50  0001 C CNN
+	1    5200 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0103
+U 1 1 5D704388
+P 5200 3900
+F 0 "#PWR0103" H 5200 3750 50  0001 C CNN
+F 1 "+3.3V" H 5215 4073 50  0000 C CNN
+F 2 "" H 5200 3900 50  0001 C CNN
+F 3 "" H 5200 3900 50  0001 C CNN
+	1    5200 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 3250 5300 3250
+Wire Wire Line
+	5200 3900 5150 3900
+Wire Wire Line
+	5150 3900 5150 4100
+Wire Wire Line
+	5150 4100 5050 4100
+Connection ~ 5150 3900
+Wire Wire Line
+	5150 3900 5050 3900
+Wire Wire Line
+	3650 3450 3750 3450
+$Comp
+L power:GND #PWR0104
+U 1 1 5D704ECB
+P 4450 4200
+F 0 "#PWR0104" H 4450 3950 50  0001 C CNN
+F 1 "GND" H 4455 4027 50  0000 C CNN
+F 2 "" H 4450 4200 50  0001 C CNN
+F 3 "" H 4450 4200 50  0001 C CNN
+	1    4450 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 5D705975
+P 5150 3350
+F 0 "#PWR0105" H 5150 3100 50  0001 C CNN
+F 1 "GND" V 5155 3222 50  0000 R CNN
+F 2 "" H 5150 3350 50  0001 C CNN
+F 3 "" H 5150 3350 50  0001 C CNN
+	1    5150 3350
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0106
+U 1 1 5D70614B
+P 3750 3550
+F 0 "#PWR0106" H 3750 3300 50  0001 C CNN
+F 1 "GND" H 3755 3377 50  0000 C CNN
+F 2 "" H 3750 3550 50  0001 C CNN
+F 3 "" H 3750 3550 50  0001 C CNN
+	1    3750 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 3550 3750 3550
+Wire Wire Line
+	4550 4200 4450 4200
+Wire Wire Line
+	5150 3350 5300 3350
+Text GLabel 5200 3450 0    50   Input ~ 0
+SCL
+Text GLabel 5200 3550 0    50   Input ~ 0
+SDA
+Wire Wire Line
+	5300 3450 5200 3450
+Wire Wire Line
+	5200 3550 5300 3550
+Text GLabel 4450 4100 0    50   Input ~ 0
+SCL
+Text GLabel 4450 4000 0    50   Input ~ 0
+SDA
+Wire Wire Line
+	4550 4000 4450 4000
+Wire Wire Line
+	4550 4100 4450 4100
+$EndSCHEMATC
